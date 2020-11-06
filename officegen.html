@@ -1,0 +1,26 @@
+<script type="text/javascript">
+    RED.nodes.registerType('officegen',{
+        category: 'function',
+        color: '#eb3c00',
+        defaults: {
+            name: {value: "make office file"}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "officegen.png",
+        label: function() {
+            return this.name || " make office file";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="officegen">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="officegen">
+    <p>make office file - msg.slides contents and msg.filename is needed</p>
+</script>
